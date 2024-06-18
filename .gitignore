@@ -1,0 +1,8 @@
+# IntelliJ project files
+.idea/
+
+# VSCode project files
+.vscode/
+
+# macOS specific
+.DS_Store

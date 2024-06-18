@@ -1,0 +1,18 @@
+version: "3"
+
+tasks:
+  build:
+    cmds:
+      - docker build -t go-poc-example . --no-cache
+    desc: Build the Docker image for the Go POC example without using cache.
+
+  run:
+    cmds:
+      - docker run -p 8080:8080 go-poc-example
+    desc: Run the Docker container for the Go POC example.
+    
+  build_run:
+    desc: Build and then run the Docker container for the Go POC example.
+    cmds:
+      - task: build
+      - task: run
